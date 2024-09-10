@@ -1,17 +1,17 @@
-EX.NO.2B - IMPLEMENTATION OF SLIDING WINDOW PROTOCOL
-AIM:
+# EX.NO.2B - IMPLEMENTATION OF SLIDING WINDOW PROTOCOL
+## AIM:
 To implement the sliding window protocal using Python.
-
-ALGORITHM:
-Start the program.
-Get the frame size from the user
-To create the frame based on the user request.
-To send frames to server from the client side.
-If your frames reach the server it will send ACK signal to client
-Stop the Program
-PROGRAM:
-Client:
-yogeshwaran
+## ALGORITHM:
+1. Start the program.
+2. Get the frame size from the user
+3. To create the frame based on the user request.
+4. To send frames to server from the client side.
+5. If your frames reach the server it will send ACK signal to client
+6. Stop the Program
+## PROGRAM:
+## Client:
+```
+Yogeshwaran A
 212223040249
 
 import socket
@@ -32,21 +32,22 @@ while True:
     if ack:
        print(ack)
        i+=s
-Server:
+```
+## Server:
+```
 import socket
 s=socket.socket()
 s.connect(('localhost',8000))
 while True: 
     print(s.recv(1024).decode())
     s.send("acknowledgement recived from the server".encode())
-OUPUT:
-Client :
-![image](https://github.com/user-attachments/assets/92a21442-70f2-43aa-882f-c5cf8e67a80b)
+```
+## OUPUT:
+## Client :
+![WhatsApp Image 2024-04-30 at 22 38 38_6737ff62](https://github.com/JAYASREE24032006/2b_SLIDING_WINDOW_PROTOCOL/assets/144360800/31861e17-455b-4f84-8052-2b8d2c71fe3d)
+## Server:
+![WhatsApp Image 2024-04-30 at 22 39 12_def917fa](https://github.com/JAYASREE24032006/2b_SLIDING_WINDOW_PROTOCOL/assets/144360800/5124ed5d-4b67-40e7-b827-df2f6d9955be)
 
 
-Server:
-![image](https://github.com/user-attachments/assets/edb776c1-b548-4bb7-a47d-6a9aa5a40031)
-
-
-RESULT:
+## RESULT:
 Thus, python program to perform stop and wait protocol was successfully executed.
